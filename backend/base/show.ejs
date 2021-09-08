@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Show Page</h1>
+    The <%=captain.title%> is <%=captain.entity%>.
+    <% if(captain.readyToStart === true) { %>
+      It is ready to start
+      <% } else { %>
+        It is not ready to start
+        <% } %>
+  </body>
+</html>
