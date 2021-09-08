@@ -14,6 +14,7 @@ import RegisterScreen from './screens/RegisterScreen'
 
 
 
+
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/register' component={RegisterScreen} exact/>
                 <Route path="/product/:id" component={ProductScreen} />
                 <Route path="/cart/:id?" component={CartScreen} />
+
             </Container>
         </main>
         <Footer />
