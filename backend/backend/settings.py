@@ -24,9 +24,9 @@ import os
 SECRET_KEY = 'django-insecure-*&jy-g2(1%8_cbi8tmarq-k!e*nmmb2x0awc)cvlk+wj^_$(1y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'eshop111.herokuapp.com']
 
 
 # Application definition
@@ -88,6 +88,7 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 
     'django.middleware.security.SecurityMiddleware',
@@ -178,7 +179,9 @@ STATICFILES_DIRS = [
     BASE_DIR / 'frontend/build/static'
 ]
 
-MEDIA_ROOT = 'static/images'
+MEDIA_ROOT = BASE_DIR / 'static/images'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 
